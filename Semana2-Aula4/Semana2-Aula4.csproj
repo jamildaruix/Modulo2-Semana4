@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Semana2_Aula4</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Construtor\" />
+    <Folder Include="Modificador\" />
+    <Folder Include="Encapsulamento\" />
+    <Folder Include="Sobrecarga\" />
+  </ItemGroup>
+
+</Project>
