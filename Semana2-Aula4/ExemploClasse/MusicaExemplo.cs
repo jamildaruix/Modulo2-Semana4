@@ -15,6 +15,14 @@ namespace Semana2_Aula4.ExemploClasse
         public bool Sol { get; set; }
         public bool La { get; set; }
         public bool Si { get; set; }
+        public MusicaExemplo()
+        {
+        }
+
+        public MusicaExemplo(bool notaSiDrop)
+        {
+            Si = notaSiDrop;
+        }
     }
 
 
@@ -46,5 +54,59 @@ namespace Semana2_Aula4.ExemploClasse
             //       musicaExemplo.Re == true;
         }
 
+    }
+
+    public class Violao : MusicaExemplo
+    {
+        public bool Mi1 { get; set; }
+        public bool Mi2 { get; set; }
+        public static int Frequencia;
+
+        private Violao()
+        {
+        }
+
+
+        public Violao(bool dropMi1, bool notaSiDrop) : base(notaSiDrop)
+        {
+            Mi1 = dropMi1;
+        }
+
+        static Violao()
+        {
+            Frequencia = 73; //
+        }
+
+
+        public bool Afinado()
+        {
+            Si = false;
+            Console.WriteLine($"NOT TRUE -  {!Si}");
+            Si = true;
+            Console.WriteLine($"NOT TRUE -  {!Si}");
+
+
+            return Mi1  // igual true
+                   && La  // igual true
+                   && Re // igual true
+                   && Sol == true
+                   && !Si // NOT TRUE 
+                   && Mi2 == true;  // true // false 
+        }
+
+        public bool Afinado(bool dropAfinacao)
+        {
+            return true;
+        }
+
+        public bool Afinado(bool dropAfinacao, bool drop2)
+        {
+            return true;
+        }
+
+        public void Capotraste(int posicaoCase)
+        {
+            /*Criar as notas*/ 
+        }
     }
 }

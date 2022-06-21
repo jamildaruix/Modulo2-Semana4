@@ -1,4 +1,5 @@
 ﻿using Semana2_Aula4.Aula01;
+using Semana2_Aula4.ExemploClasse;
 
 namespace Semana2_Aula4
 {
@@ -19,6 +20,11 @@ namespace Semana2_Aula4
             departamento.FuncionarioNoDepartamento = funcionario;
 
             departamento.InserirFuncionarNoDepartamento();
+
+
+            var violao = new Violao(true, false);
+            violao.Afinado();
+            violao.Afinado(dropAfinacao: true, drop2: true);
 
             //ExemploEstatico.CinquetaCentavosDeZoom();
 
