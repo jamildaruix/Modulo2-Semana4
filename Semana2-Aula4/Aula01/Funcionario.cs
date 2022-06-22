@@ -11,12 +11,24 @@ namespace Semana2_Aula4.Aula01
         public int Id { get; set; }
         public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
+        public Decimal Salario { get; private set; }
+
+        public Funcionario()
+        {
+            Salario = 1500M;
+        }
 
         public void SalvarNomeFuncionario()
         {
             Console.WriteLine($"Salvo o nome: {Nome}");
             Console.WriteLine("Salvo o nome: " + Nome);
             Console.WriteLine(string.Format("Salvo o nome: {0}", Nome));
+        }
+
+        public void ReajusteConvensaoColetiva(int percentual)
+        {
+            Salario += Salario * (Convert.ToDecimal(percentual) / 100);
+            Salario++;
         }
     }
 }

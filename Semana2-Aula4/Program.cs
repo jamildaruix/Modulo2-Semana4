@@ -13,14 +13,22 @@ namespace Semana2_Aula4
             funcionario.Nome = "Nome de vocês aqui";
             funcionario.SalvarNomeFuncionario();
 
-            Departamento departamento = new Departamento();
+            Console.WriteLine($"Salario sem Reajuste {funcionario.Salario}");
+            Console.WriteLine($"Aplicando Reajuste Salario de 50%");
+            funcionario.ReajusteConvensaoColetiva(50);
+            Console.WriteLine($"Salario com Reajuste {funcionario.Salario}");
+
+            CentroDeCusto centroDeCusto = new CentroDeCusto(1, "TESTE", DateTime.Now, 10M, 2022);
+
+            Departamento departamento = new Departamento(centroDeCusto);
             departamento.Id = 100;
             departamento.DesricaoDepartamento = "Dev In House";
             departamento.CentroDeCusto = new Random(50).Next(5000);
             departamento.FuncionarioNoDepartamento = funcionario;
+            
 
             departamento.InserirFuncionarNoDepartamento();
-
+                       
 
             var violao = new Violao(true, false);
             violao.Afinado();
