@@ -24,6 +24,24 @@ namespace Semana2_Aula4
 
             CentroDeCusto centroDeCusto = new CentroDeCusto(1, "TESTE", DateTime.Now, 10M, 2022);
 
+
+            //try
+            //{
+            //    /*Método gigante pra Trocar de guitarra*/
+            //    int valor = Convert.ToInt32(centroDeCusto.AnoVerbaLiberada);
+            //}
+            //catch (Exception ex)
+            //{
+            //    string textoSobreescrita = centroDeCusto.ToString();
+            //    Console.Error.WriteLine($@"Erro Métod de converter string para inteiro 
+            //                               | {textoSobreescrita}");
+            //    throw ex;
+            //}
+
+            
+
+
+
             Departamento departamento = new Departamento(centroDeCusto);
             departamento.Id = 100;
             departamento.DesricaoDepartamento = "Dev In House";
