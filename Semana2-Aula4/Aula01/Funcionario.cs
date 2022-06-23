@@ -30,5 +30,34 @@ namespace Semana2_Aula4.Aula01
             Salario += Salario * (Convert.ToDecimal(percentual) / 100);
             Salario++;
         }
+
+        #region SOBRECARGA
+
+        /// <summary>
+        /// Retorno da string com os campos Primeiro Nome, Segundo Nome
+        /// </summary>
+        /// <param name="primeiroNome"></param>
+        /// <param name="segundoNome"></param>
+        /// <returns>Nome: SEU NOME AQUI</returns>
+        public string DadosFuncionario(string primeiroNome, string segundoNome)
+        {
+            return $"Nome: {primeiroNome} {segundoNome}";
+        }
+
+        /// <summary>
+        /// Retorno da string com os campos Primeiro Nome, Segundo Nome, DataNascimento
+        /// </summary>
+        /// <param name="primeiroNome"></param>
+        /// <param name="segundoNome"></param>
+        /// <param name="dataNascimento"></param>
+        /// <returns>Nome: SEU NOME AQUI | Data Nascimento SUA DATA</returns>
+        public string DadosFuncionario(string primeiroNome, string segundoNome, DateTime dataNascimento)
+        {
+            //return $"Nome: {primeiroNome} {segundoNome}| Data Nascimento {dataNascimento}";
+
+            return  $"{DadosFuncionario(primeiroNome, segundoNome)}| Data Nascimento {dataNascimento}";
+        }
+
+        #endregion
     }
 }
