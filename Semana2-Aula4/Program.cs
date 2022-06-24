@@ -7,6 +7,12 @@ namespace Semana2_Aula4
     {
         static void Main(string[] args)
         {
+            //Exemplo Exercicios via console !!!!
+            Console.WriteLine("Nome: ");
+            string nome = Console.ReadLine();
+            Console.WriteLine($"Nome Preenchido {nome}");
+          
+            //Exemplo Aula 01, 02, 03 e 04
             Funcionario funcionario = new Funcionario();
             //Preencher o ID do Funcionário
             //Colocar a Data de Nascimento 
